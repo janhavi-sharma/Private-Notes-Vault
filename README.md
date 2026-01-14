@@ -1,31 +1,59 @@
-# PrivateNotesVault
+🔐 Private Notes Vault
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.0.
+A simple and secure private notes web app where users can create and manage their own notes after authentication.
 
-A minimal, secure, and distraction-free private notes web application where each user can create, view, and manage their own notes.
+---
 
-Built as part of an assignment with a focus on authentication, data ownership, clean UI, and full-stack flow.
+✨ Features
 
-## Development server
+Email + Password login
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Google OAuth login
 
-## Code scaffolding
+Create, view, edit, and delete notes
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Notes are private and tied to the logged-in user only
 
-## Build
+Each note includes:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Title
 
-## Running unit tests
+Content
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Created timestamp
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+---
 
-## Further help
+🔒 Security
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Built using Supabase Authentication
+
+Row Level Security (RLS) enforced
+
+Users can only access their own notes
+
+
+---
+
+🧰 Tech Stack
+
+Angular
+
+Supabase (Auth + Database)
+
+Netlify (Deployment)
+
+
+---
+
+🚀 Live Demo
+
+🔗 Live App: Netlify URL
+🔗 GitHub Repo: GitHub URL
+---
+
+
+👤 Author
+
+Janhavi Sharma
