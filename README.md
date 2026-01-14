@@ -50,7 +50,7 @@ Netlify (Deployment)
 🚀 Live Demo
 
 🔗 Live App: Netlify URL
-🔗 GitHub Repo: GitHub URL
+🔗 GitHub Repo: [GitHub URL](https://github.com/janhavi-sharma/Private-Notes-Vault)
 ---
 
 
