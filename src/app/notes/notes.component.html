@@ -1,0 +1,74 @@
+<div class="notes-page">
+
+  <!-- LEFT -->
+  <aside class="notes-sidebar">
+    <div class="sidebar-header">
+      <h2>Notes</h2>
+      <button class="new-note-btn" (click)="openNewNote()">New Note</button>
+    </div>
+
+    <!-- New Note Modal -->
+    <div class="modal-backdrop" *ngIf="showNewNoteModal">
+      <div class="modal">
+        <h3>New Note</h3>
+
+        <input
+          type="text"
+          [(ngModel)]="title"
+          placeholder="Title"
+        />
+
+        <textarea
+          [(ngModel)]="content"
+          placeholder="Content"
+        ></textarea>
+
+        <div class="modal-actions">
+          <button class="cancel" (click)="closeNewNote()">Cancel</button>
+          <button class="add" (click)="addNote()">{{ isEditing ? 'Save' : 'Add' }}</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="notes-count">{{ notes.length }} notes</div>
+
+    <div class="notes-list" *ngIf="notes.length; else empty">
+      <div
+        class="note-card"
+        *ngFor="let note of notes"
+        (click)="selectNote(note)"
+        [class.active]="selectedNote?.id === note.id"
+      >
+        <h3>{{ note.title }}</h3>
+        <small>{{ note.created_at | date:'short' }}</small>
+      </div>
+    </div>
+
+    <ng-template #empty>
+      <div class="empty-notes">
+        <p>No notes yet</p>
+        <small>Click "New Note" to create your first note</small>
+      </div>
+    </ng-template>
+
+    <div class="logout">
+      <button (click)="logout()">Logout</button>
+    </div>
+  </aside>
+
+  <!-- RIGHT -->
+  <main class="notes-viewer">
+    <div *ngIf="!selectedNote" class="no-note">
+      <p>Select a note to view</p>
+    </div>
+
+    <div *ngIf="selectedNote" class="note-view">
+      <h1>{{ selectedNote.title }}</h1>
+      <small>Created {{ selectedNote.created_at | date:'longDate' }}, at {{ selectedNote.created_at | date:'shortTime' }}</small>
+      <p style="padding-bottom: 16px;";>{{ selectedNote.content }}</p>
+      <button class="delete-btn" style="margin-right: 24px;" (click)="editNote(selectedNote)">Edit</button>
+      <button class="delete-btn" (click)="deleteNote(selectedNote.id)"> Delete </button>
+    </div>
+  </main>
+
+</div>

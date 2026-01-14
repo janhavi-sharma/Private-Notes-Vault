@@ -1,0 +1,25 @@
+<div class="login-background">
+  <div class="login-form">
+    <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;WELCOME!</h1>
+
+    <input
+      type="email"
+      [(ngModel)]="email"
+      placeholder="Email"
+    />
+
+    <input
+      type="password"
+      [(ngModel)]="password"
+      placeholder="Password"
+    />
+
+    <button (click)="login()">Login</button>
+
+    <button class="google-btn" (click)="loginWithGoogle()">
+      Login with Google
+    </button>
+
+    <p *ngIf="error" class="error">{{ error }}</p>
+  </div>
+</div>

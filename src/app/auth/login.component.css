@@ -1,0 +1,85 @@
+.login-background {
+  width: 100vw;
+  height: 100vh;
+
+  background-image: url('/assets/login-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.login-form {
+  position: absolute;
+  top: 53%;
+  right: 70%;
+  transform: translateY(-50%);
+  border: solid;
+  width: 320px;
+  height: 490px;
+  padding: 2rem;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form input {
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  padding: 0.75rem 1rem;
+
+  border-radius: 8px;
+  border: 1px solid #ccc;
+
+  font-size: 1rem;
+  outline: none;
+}
+
+.login-form input:focus {
+  border-color: #86bb83;
+}
+
+.login-form button {
+  padding: 0.75rem;
+  margin-top: 2rem;
+
+  border-radius: 8px;
+  border: none;
+
+  font-size: 1rem;
+  cursor: pointer;
+
+  background-color: #86bb83;
+  color: #312712;
+}
+
+.login-form button:hover {
+  background-color: #86a776;
+}
+
+.google-btn {
+  background-color: #de5246;
+}
+
+.google-btn:hover {
+  background-color: #c44135;
+}
+
+.error {
+  color: #d9534f;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  .login-form {
+    left: 50%;
+    top: 50%;
+    right: auto;
+    transform: translate(-50%, -50%);
+    width: 90%;
+  }
+}
