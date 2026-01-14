@@ -49,7 +49,7 @@ Netlify (Deployment)
 
 🚀 Live Demo
 
-🔗 Live App: Netlify URL
+🔗 Live App: [Netlify URL](https://unique-douhua-bf2828.netlify.app/)
 🔗 GitHub Repo: [GitHub URL](https://github.com/janhavi-sharma/Private-Notes-Vault)
 ---
 
