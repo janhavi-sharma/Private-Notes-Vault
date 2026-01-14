@@ -1,5 +1,28 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
+# Node & Angular
+node_modules/
+dist/
+.angular/
+.out-tsc/
+
+# Environment files
+src/environments/environment.ts
+src/environments/environment.prod.ts
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
 # Compiled output
 /dist
 /tmp
